@@ -1,0 +1,5 @@
+bluemix api https://api.ng.bluemix.net
+
+bluemix login -u rich.john@me.com -o Helvellyn -s test      >>PASSWORD: Fish4Trout!
+
+bluemix app push hvweb

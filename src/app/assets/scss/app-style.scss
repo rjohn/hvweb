@@ -1,0 +1,310 @@
+// Color Palette 1
+$color-1: #fafafa; 
+$color-2: #e3f2fd;
+$color-3: #db5461;
+$color-4: #4A4A4A;
+$color-5: #8aa29e;
+
+$color-white: #ffffff;
+
+$primary-color: $color-4;
+$secondary-color: $color-5; 
+$text-color: $color-1;
+$link-text-color: $color-2;
+
+$logo-width: 600px;
+$logo-height: 250px;
+
+$main-font-family: "Monserrat",sans-serif;
+
+@import 'foundation-settings';
+@import '../libs/foundation-sites/scss/foundation.scss';
+
+@import '../css/foundation-icons.css';
+@import 'weather-icons';
+
+@font-face {
+    font-family: SansationRegular;
+    src: url(../font/Sansation_Regular.ttf);
+}
+@font-face {
+    font-family: SansationLight;
+    src: url(../font/Sansation_Light.ttf);
+}
+
+//@include foundation-everything;
+@include foundation-everything(true);
+
+
+.wi {
+  @extend .wi;
+  font-size: 6.0em;
+  color: #4A4A4A;
+}
+
+.weather {
+  border-radius: 25px;
+  border: 6px solid #4A4A4A;
+  padding: 20px; 
+  width: 500px;
+  height: 300px;
+}
+
+.full-scr {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.bg-img1 {
+  background: url(../img/photos/IMG_1390.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-img2 {
+  background: url(../img/photos/IMG_1431.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-grey {
+  background: $color-1; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// Top Bar Menu
+.top-bar {
+  li a {
+    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  width: 100%;
+}
+
+.top-bar-button {
+    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.logo-icon {
+  color: $secondary-color;
+  font-size: 48px;
+  height: 36px; 
+  width: 64px;
+  margin-right: 12px;
+  margin-left: 18px;
+}
+
+.top-bar-title {
+  a {
+    margin-top: .5em;
+    //font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+  }
+}
+
+.menu-centered {
+  @extend .menu-centered;
+  background-color: $color-5;
+  box-shadow: 3px 3px 5px #C0C0C0;
+
+  li a {
+    margin-top: .1em;
+    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    color: $link-text-color;
+  }
+  li p {
+    margin-top: .1em;
+    margin-bottom: .1em;
+    padding: 0.7rem 1rem;
+    line-height: 1;
+    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    color: $text-color;
+  }
+}
+
+.brand-text {
+  vertical-align: bottom;
+}
+
+.main-heading {
+  margin: 1.0em;
+  font-family: "Montserrat",Arial,Helvetica,sans-serif;
+  font-size: 36px;
+  color: $color-5;
+}
+.front-page-heading {
+  margin: 1.0em;
+  font-family: Montserrat,sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 1.2em;
+  text-transform: none;
+  font-size: 64px!important;
+  letter-spacing: -5px!important;
+  margin-left: -10px;
+  color: $color-white;
+}
+
+.full-height {
+  height:100%;
+}
+
+.widget.widget_text .textwidget {
+    -ms-word-break: break-word;
+    word-break: break-word;
+}
+
+.sub-title {
+  padding-top: 1.0em;
+  font-size: 40px;
+  font-family: "Montserrat",Arial,Helvetica,sans-serif;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.3em;
+}
+
+.callout-title {
+    margin-top: .75em;
+    margin-bottom: 1.0em;
+    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: bold;  
+}
+
+.link-style-button {
+  background:none!important;
+  color: $link-text-color;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  /*border is optional*/
+  cursor: pointer;
+}
+
+$card-user-profile-bg: $card-background;
+$card-user-profile-text-color: $body-font-color;
+
+.card-user-profile {
+  position: relative;
+  z-index: 0;
+  @include card-container($card-user-profile-bg, $card-user-profile-text-color, 1rem, $global-radius);
+
+  &:hover {
+    .card-user-profile-img {
+      opacity: 1;
+    }
+  }
+}
+
+.card-user-profile-content {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: rem-calc(-55);
+    left: rem-calc(-30);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: rem-calc(55) 0 0 rem-calc(500);
+    z-index: 0;
+    border-color: transparent transparent transparent $card-user-profile-bg;
+  }
+}
+
+.card-user-profile-actions {
+  @include card-divider;
+  background: $card-user-profile-bg;
+  display: flex;
+}
+
+.card-user-profile-img {
+  max-width: 100%;
+  opacity: 0.85;
+  transition: all 0.25s ease;
+}
+
+.card-user-profile-avatar {
+  position: absolute;
+  bottom: 100%;
+  left: 1rem;
+  z-index: 2;
+  max-width: rem-calc(90);
+
+  img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba($black, 0.3);
+  }
+}
+
+.card-user-profile-name {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-user-profile-button {
+  margin-bottom: 0;
+  flex: 1 0 0;
+
+  + .card-user-profile-button {
+    margin-left: 1rem;
+  }
+}
+
+.card-user-profile-info {
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+$marketing-site-hero-height: 100%;
+
+.marketing-site-hero {
+  background: url(../img/photos/IMG_1390.png) top right no-repeat;
+  height: $marketing-site-hero-height;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 40em) {
+    background-position: center center;
+  }
+}
+
+.marketing-site-hero-content {
+  max-width: $global-width;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .button.round {
+    border-radius: 5000px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
+
